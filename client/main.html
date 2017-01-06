@@ -2,8 +2,24 @@
   <title>Trombinoscope WebP2018</title>
 </head>
 <body>
-  <h1>Trombinoscope de la Web Promo 2018</h1>
+  <header class="col-lg-12">
+      <nav class="navbar navbar-inverse navbar-embossed">
+          <a href="javascript:;" class="navbar-brand">
+              Trombi
+          </a>
+          <div class="navbar-left navbar-nav">
+              {{> loginButtons }}
+          </div>
+      </nav>
+  </header>
 
-  {{> loginButtons }}
 
+  {{#if currentUser}}
+
+  {{> addBar }}
+
+  {{> studentList }}
+
+
+  {{/if}}
 </body>

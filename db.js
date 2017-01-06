@@ -1,2 +1,1 @@
-users = new Mongo.Collection();
-students = new Mongo.Collection();
+Students = new Mongo.Collection("students");

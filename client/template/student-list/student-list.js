@@ -1,3 +1,19 @@
+var createStudent = function (instance, id){
+    var updateName = instance.find('#updateName-'+ id).value;
+    Students.update(
+        id
+        ,{
+            $set : {
+                name : updateName
+            }
+        }
+    );
+    var getUpdate = instance.find('#'+ id);
+    getUpdate.style.display = "none";
+}
+
+
+
 Template.studentList.helpers({
     students(){
         return Students.find();
@@ -12,18 +28,12 @@ Template.studentList.events({
         var getUpdate = instance.find('#'+ this._id);
         getUpdate.style.display = "block";
     },
-    "keyup .updateInput,click .validUpdate"(event, instance){
+    "click .validUpdate "(event, instance){
+        createStudent(instance, this._id);
+
+    },
+    "keyup .updateInput"(event, instance){
         if (event.which !==13) return;
-        var updateName = instance.find('#updateName-'+ this._id).value;
-        Students.update(
-            this._id
-            ,{
-                $set : {
-                    name : updateName
-                }
-            }
-        );
-        var getUpdate = instance.find('#'+ this._id);
-        getUpdate.style.display = "none";
+        createStudent(instance, this._id);
     }
 });

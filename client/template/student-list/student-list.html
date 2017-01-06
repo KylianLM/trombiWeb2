@@ -4,6 +4,7 @@
         {{#each students}}
         <li>
             {{ name }}
+            <img src="{{ img }}" alt="">
             <a id="deleteStudent" class="btn btn-danger" role="button" >X</a>
             <a id="getUpdateForm" class="btn btn-info" role="button" >Modifier</a>
             <div id="{{ _id }}" class="modify form-inline">

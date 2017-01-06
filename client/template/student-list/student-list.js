@@ -17,8 +17,13 @@ var createStudent = function (instance, id){
 Template.studentList.helpers({
     students(){
         return Students.find();
+    },
+    imageFile(){
+        return Images.findOne();
     }
 });
+
+
 
 Template.studentList.events({
     "click #deleteStudent"(){

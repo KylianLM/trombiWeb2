@@ -12,8 +12,9 @@ Template.studentList.events({
         var getUpdate = instance.find('#'+ this._id);
         getUpdate.style.display = "block";
     },
-    "click .validUpdate"(event, instance){
-        var updateName = instance.find('.updateName-'+ this._id).value;
+    "keyup .updateInput,click .validUpdate"(event, instance){
+        if (event.which !==13) return;
+        var updateName = instance.find('#updateName-'+ this._id).value;
         Students.update(
             this._id
             ,{

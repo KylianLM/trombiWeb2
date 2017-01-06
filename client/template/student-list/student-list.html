@@ -1,15 +1,15 @@
 <template name="studentList">
 
-    <ul class="row">
+    <ul class="row cardList">
         {{#each students}}
-        <li class="col-lg-3">
+        <li class="card col-lg-3">
             {{ name }}
             <img src="{{ img }}" alt="">
-            <a id="deleteStudent" class="btn btn-danger" role="button" >X</a>
+            <a id="deleteStudent" class="btn btn-danger delete" role="button" >X</a>
             <a id="getUpdateForm" class="btn btn-info" role="button" >Modifier</a>
             <div id="{{ _id }}" class="modify form-inline">
                 <input type="text" id="updateName-{{_id}}" class="updateInput form-control" value="{{ name }}">
-                <a class="validUpdate btn btn-inverse" role="button" >Valider</a>
+                <a class="validUpdate btn btn-inverse" role="button" >Ok</a>
             </div>
         </li>
         {{/each}}

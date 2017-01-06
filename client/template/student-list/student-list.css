@@ -1,3 +1,26 @@
 .modify{
     display: none;
 }
+.cardList {
+	margin-left: 15px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.card {
+	position: relative;
+	margin:10px;
+	background: #EFF0F2;
+	box-sizing: border-box;
+	padding: 30px;
+	list-style: none;
+	width: calc(25% - 40px);
+	height: 400px;
+	border-radius: 10px;
+	border: 1px solid #e1e3e7
+}
+
+.delete {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}

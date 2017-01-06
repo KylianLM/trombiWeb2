@@ -1,8 +1,8 @@
 <template name="studentList">
 
-    <ul>
+    <ul class="row">
         {{#each students}}
-        <li>
+        <li class="col-lg-3">
             {{ name }}
             <img src="{{ img }}" alt="">
             <a id="deleteStudent" class="btn btn-danger" role="button" >X</a>
